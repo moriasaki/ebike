@@ -1,11 +1,23 @@
 public class Main {
     public static void main(String[] args) {
-        ERyder bike1 = new ERyder();
-        System.out.println("Bike 1 (Default Constructor):");
-        bike1.printBikeDetails();
-        ERyder bike2 = new ERyder(101, 85, true, 120.5);
-        System.out.println("Bike 2 (Parameterized Constructor):");
-        bike2.ride(); 
-        bike2.printBikeDetails(); 
+        ERyder bike1 = new ERyder(
+            101,          
+            85,         
+            true,       
+            120.5,        
+            "Genshin Impact",   
+            "123-456-7890"
+        );
+        ERyder bike2 = new ERyder(
+            102,          
+            60,           
+            true,         
+            80.2,       
+            "Shimokita", 
+            "114-514-1919-810"
+        );
+        bike1.printRideDetails(15); 
+        bike2.printRideDetails(30); 
+        System.out.println("\nNote: calculateFare() is private - cannot call directly!");
     }
 }
